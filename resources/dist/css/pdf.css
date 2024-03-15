@@ -1,0 +1,33 @@
+
+.container img{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+.titre{
+    text-align: center;
+}
+ .row .col{
+    text-align: center;
+}
+.fonction{
+    float: right;
+}
+.wrapper{
+    margin-left: 120px;
+    margin-right: 120px;
+    
+}
+
+.row1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 120px;
+}
+.col1{
+    padding: 10px;
+    text-align: center;
+    
+}
+
