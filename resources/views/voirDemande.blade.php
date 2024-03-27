@@ -428,88 +428,8 @@
 
       <!--Valeur à récupérer-->
 <div id="recuperation">
-      <div class="row">
-        <div class="col-sm">
-          <input type="hidden" name="slug" value="{{ $params->slug}}">
-          <input type="hidden" name="firstName" value="{{ $params->firstName}}">
-          
-        </div>
-        <div class="col-sm">
-          <input type="hidden" name="lastName" value="{{ $params->lastName}}">
-        </div>
-        </div>
-      <div class="row">
-        <div class="col-sm">
-          <input type="hidden" name="lieuNaissance" value="{{ $params->lieuNaissance}}">
-            
-        </div>
-        <div class="col-sm">
-          <input type="hidden" name="dateNaissance" value="{{ $params->dateNaissance}}">
-          <input type="hidden" name="neVers" value="{{ $params->neVers}}">
-        </div>
-        </div>
-      <div class="row">
-        <div class="col-sm">
-          <input type="hidden" name="numPhone" value="{{ $params->numPhone}}">
-            
-        </div>
-        <div class="col-sm">
-          <input type="hidden" name="adresse" value="{{ $params->adresse}}">
-        </div>
-        </div>
-      <div class="row">
-        <div class="col-sm">
-          <input type="hidden" name="cni" value="{{ $params->cni}}">
-            
-        </div>
-        <div class="col-sm">
-          <input type="hidden" name="dateDelivrance" value="{{ $params->dateDelivrance}}">
-        </div>
-        </div>
-      <div class="row">
-        <div class="col-sm">
-          <input type="hidden" name="photocopieCni" value="{{ $params->photocopieCni}}">
-            
-        </div>
-        <div class="col-sm">
-          <input type="hidden" name="lieuDelivrance" value="{{ $params->lieuDelivrance}}">
-        </div>
-        </div>
+  <input type="hidden" name="slug" value="{{ $params->slug}}">
 
-      <div class="row">
-        <div class="col-sm">
-          <input type="hidden" name="universite" value="{{ $params->universite}}">
-            
-        </div>
-        <div class="col-sm">
-          <input type="hidden" name="parcours" value="{{ $params->parcours}}">
-        </div>
-        <div class="col-sm">
-          <input type="hidden" name="niveau" value="{{ $params->niveau}}">
-        </div>
-        </div>
-      
-      <div class="row">
-        <div class="col-sm">
-          <input type="hidden" name="motif" value="{{ $params->motif}}">
-            
-        </div>
-        <div class="col-sm">
-          <input type="hidden" name="diplomeCertifie" value="{{ $params->diplomeCertifie}}">
-        </div>
-        </div>
-      
-      <div>
-
-        <div class="row">
-          <div class="col-sm">
-            <input type="hidden" name="diplomeOriginal" value="{{ $params->diplomeOriginal}}">
-              
-          </div>
-          <div class="col-sm">
-            <input type="hidden" name="matricule" value="{{ $params->matricule}}">
-          </div>
-        </div>
 </div>
          <!-- §§§§§§ -->
 

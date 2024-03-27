@@ -75,12 +75,9 @@
         <thead>
           <tr>
             
-            <th>Matricule</th>
-            <th>Universite</th>
-            <th>Mention</th>
-            <th>Parcours</th>
-            <th>Niveau</th>
-            <th>Année de sortie</th>
+            <th>Numéro</th>
+            <th>Session</th>
+            <th>Lieu</th>
             <th>Nom</th>
             <th>Prénom</th>
             <th>Date de Naissance</th>
@@ -93,12 +90,9 @@
 
             @foreach($valid as $list)
             <tr>
-            <td >{{ $list->matricule}}</td>
-            <td >{{ $list->universite}}</td>
-            <td >{{ $list->mention}}</td>
-            <td >{{ $list->parcours}}</td>
-            <td >{{ $list->niveau}}</td>
-            <td >{{ $list->anneeUniv}}</td>
+            <td >{{ $list->numInscription}}</td>
+            <td >{{ $list->session}}</td>
+            <td >{{ $list->lieu}}</td>
             <td >{{ $list->firstName}}</td>
             <td >{{ $list->lastName}}</td>
             <td >

@@ -113,7 +113,16 @@
                     INSTITUT DE FORMATION TECHNIQUE
                 </td>
                 <td colspan="2" class="tablePadding">
+                    @if($params->niveau === 'Licence 2')
+                    CATEGORIE IV
+                    @elseif($params->niveau === 'Licence 3')
                     CATEGORIE V
+                    @elseif($params->niveau === 'Master 1')
+                    CATEGORIE VI
+                    @elseif($params->niveau === 'Master 2')
+                    CATEGORIE VIII
+    
+                    @endif
                 </td>
             </tr>
         </table>
@@ -173,11 +182,11 @@
         N°{{$params->slug}} /{{\Carbon\Carbon::parse($params->created_at)->format('Y')}}-MTEFOP/SG/DGFOP/DFPAE
                 <br>Délivré à M/Mr: {{$params->firstName}} {{$params->lastName}}
                 <br>
-                @if($params->niveau === 'L3')
+                @if($params->niveau === 'Licence 3')
                     Titulaire du : DIPLOME DE Licence
-                @elseif($params->niveau === 'M2'){
+                @elseif($params->niveau === 'Master 2')
                     Titulaire du : DIPLOME DE Master
-                } @else
+                 @else
                     Titulaire de : ATTESTATION DE {{$params->niveau}}
                 @endif
                 <br>Parcours: {{$params->parcours}}  </b>

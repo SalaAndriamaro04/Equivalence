@@ -52,10 +52,6 @@ Route::get('/erreur/{slug}', [HomeController::class, 'voirErreur'])-> name('voir
 //Liste terminer
 Route::get('/listTerminer', [HomeController::class, 'listTerminer'])-> name('listTerminer')->middleware('auth');
 
-use App\Http\Controllers\PDFController;
-Route::get('/listTerminer/pdf', [PDFController::class, 'index'])-> name('pdfGenerator');
-Route::get('/{slug}', [PDFController::class, 'affichePrint'])-> name('affichePrint')->middleware('auth');
-
 //Voir chaque demande terminer
 Route::get('/listTerminer/{slug}', [HomeController::class, 'voirTerminer'])-> name('voirTerminer')->middleware('auth');
 
@@ -82,4 +78,9 @@ Route::post('/terminer', [PromotionController::class, 'terminer'])-> name('termi
 
 //Confirmation envoi demande au terminer
 Route::get('/terminer/{slug}', [PromotionController::class, 'envoiTerminer'])-> name('confirmTerminer')->middleware('auth');
+
+//Pour le pdf de l'équivalence
+use App\Http\Controllers\PDFController;
+Route::get('/listTerminer/pdf', [PDFController::class, 'index'])-> name('pdfGenerator');
+Route::get('/{slug}', [PDFController::class, 'affichePrint'])-> name('affichePrint')->middleware('auth');
 

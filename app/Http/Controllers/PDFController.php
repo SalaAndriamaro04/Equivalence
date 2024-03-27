@@ -8,9 +8,7 @@ use App\Models\Terminers;
 use Elibyy\TCPDF\Facades\TCPDF;
 use Illuminate\Support\Facades\Response;
 
-require_once '../vendor/dompdf/autoload.inc.php';
-use Dompdf\Dompdf;
-use Dompdf\Options;
+
 
 class PDFController extends Controller
 {
@@ -90,15 +88,23 @@ class PDFController extends Controller
 
     public function affichePrint($slug){
         $params= Terminers::where('slug','=',$slug)->first();
+        
         if($params->universite === 'CNTEMAD'){
             return view('cntemad',compact('params'));
         } else if($params->universite === 'Ecole Nationale d\'Informatique'){
             return view('eni',compact('params'));
         } else if($params->universite === 'Ecole de Management et de l\'Innovation Technologique'){
             return view('emit',compact('params'));
-        } else {
+        } else if($params->universite === 'Institut de Formation Technique') {
             return view('ift',compact('params'));
+        } else if($params['niveau'] === 'CEPE' || $params['niveau'] === 'BEPC' || $params['niveau'] === 'BACC'){
+            return view('etablissement',compact('params'));
+        } else if($params['niveau'] === 'CRINFP' || $params['niveau'] === 'CAP' || $params['niveau'] === 'CAE'){
+            return view('formation',compact('params'));
+        } else if($params['niveau'] === 'DELF B1' || $params['niveau'] === 'DELF B2' || $params['niveau'] === 'DALF C1' || $params['niveau'] === 'DALF C2' || $params['niveau'] === 'ITP'){
+            return view('langue',compact('params'));
         }
+
         
     }
 }

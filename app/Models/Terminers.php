@@ -21,13 +21,34 @@ class Terminers extends Model
         'dateDelivrance',
         'lieuDelivrance',
         'photocopieCni',
-        'universite',
-        'parcours',
         'niveau',
-        'matricule',
-        'diplomeOriginal',
-        'diplomeCertifie',
+        'titreOriginal',
         'motif',
         'slug',
+
+        'universite',
+        'mention',
+        'parcours',
+        'matricule',
+        'anneeUniv',
+
+        'numBacc',
+        'sessionBacc',
+        'serieBacc',
+        'centreBacc',
+        'mentionBacc',
+
+        'numInscription',
+        'session',
+        'centre',
+
+        'numFormation',
+        'anneeFormation',
+        'centreFormation',
+        'diplomeAssorti',
+
+        'numCandidat',
+        'centreExam',
+        'anneeExam',
     ];
 }
