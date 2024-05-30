@@ -2,5 +2,5 @@
 mail: test@test.mg
 password: 1234
 
-#Base de donnée
+#Base de donnée:
 equivalence.sql
